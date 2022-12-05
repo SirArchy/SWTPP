@@ -16,7 +16,7 @@ import Data.Bits ( (.&.), (.|.), shift )
 data Move = Move {start :: Pos, target :: Pos, turn :: Int}
 
 instance Show Move where
-  show (Move (Pos startC startR) (Pos tarC tarR) tr) = [startC] ++ (show startR) ++ "-" ++ [tarC] ++ show tarR ++ "-" ++ show tr
+  show (Move (Pos startC startR) (Pos tarC tarR) tr) = [startC] ++ show startR ++ "-" ++ [tarC] ++ show tarR ++ "-" ++ show tr
 
 instance Eq Move where
   (==) (Move (Pos sc1 sr1) (Pos tc1 tr1) r1) (Move (Pos sc2 sr2) (Pos tc2 tr2) r2) =
